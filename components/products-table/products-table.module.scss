@@ -1,0 +1,168 @@
+.productsTable {
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    padding-bottom: 16px;
+    text-align: center;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    &.productNameTh {
+      text-align: left;
+    }
+  }
+
+  tbody {
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+
+    tr {
+      height: 120px;
+      cursor: pointer;
+
+      &:hover {
+        .productName {
+          color: #34c78a;
+        }
+      }
+    }
+  }
+
+  tr {
+    &:not(:last-child) {
+      td {
+        border-bottom: 1px solid #eaeaea;
+      }
+    }
+
+    &:nth-child(even) {
+      background: #f9f9f9;
+    }
+  }
+
+  td {
+    &.productNameTd {
+      width: 256px;
+    }
+
+    &.priceTd {
+      text-align: center;
+    }
+  }
+}
+
+.positionGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.positionWrap {
+  position: relative;
+}
+
+.position {
+  font-size: 24px;
+  color: #333;
+}
+
+.changePosition {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 2px);
+  font-weight: 600;
+  font-size: 14px;
+
+  color: #34c78a;
+}
+
+.productName {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+}
+
+.productImgContainer {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.brandGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.brandLogoContainer {
+  width: 80px;
+  margin-bottom: 8px;
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.brandName {
+  font-size: 16px;
+
+  color: #333333;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+
+  color: #000000;
+}
+
+.ratingGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.rating {
+  position: relative;
+  margin-bottom: 8px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  background: #34c78a;
+  border-radius: 2px;
+
+  &:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 16px;
+    height: 7px;
+    background: url('/img/rating-arrow.svg') center no-repeat;
+    transform: translateX(-50%);
+    content: '';
+  }
+}
+.reviews {
+  color: #808080;
+  font-size: 14px;
+}

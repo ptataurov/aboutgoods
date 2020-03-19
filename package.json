@@ -1,0 +1,47 @@
+{
+  "name": "aboutgoods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Pavel Tataurov",
+  "license": "ISC",
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "jsxBracketSameLine": true
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-rational-order"
+    ],
+    "rules": {
+      "color-hex-case": "lower",
+      "color-hex-length": "short",
+      "declaration-empty-line-before": "never"
+    }
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "mongodb": "^3.5.5",
+    "next": "^9.3.0",
+    "next-connect": "^0.6.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.26.3",
+    "stylelint": "^13.2.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.0.0"
+  }
+}

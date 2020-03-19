@@ -1,0 +1,56 @@
+.products {
+  max-width: 1080px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
+
+  > * {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.header {
+  display: flex;
+  padding-right: 40px;
+  margin-bottom: 24px;
+}
+
+.swither {
+  margin-left: auto;
+
+  > * {
+    width: 34px;
+    height: 34px;
+
+    &:global(.active) {
+      rect {
+        fill: #5ad4a1;
+      }
+    }
+
+    &:not(:global(.active)) {
+      &:hover {
+        rect {
+          fill: #e2e2e2;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      margin-right: 8px;
+    }
+  }
+}
+
+// mixins {
+
+.productsTable {
+  margin-right: 32px;
+}

@@ -1,0 +1,15 @@
+.productsWithFilters {
+  display: flex;
+}
+
+// mixins
+
+.filters {
+  align-self: flex-start;
+  margin-left: auto;
+}
+
+.products {
+  max-width: 1040px;
+  width: 100vw;
+}

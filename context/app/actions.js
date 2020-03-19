@@ -1,0 +1,2 @@
+export const TOGGLE_OVERLAY = 'TOGGLE_OVERLAY'
+export const SET_OVERLAY = 'SET_OVERLAY'
