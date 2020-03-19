@@ -74,8 +74,8 @@
 
   .fill {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
     height: 100%;
     background: #5ad4a1;
   }
@@ -106,8 +106,8 @@
   .search {
     display: flex;
     margin-bottom: 16px;
-    border: 1px solid #ccc;
     background: #fff;
+    border: 1px solid #ccc;
   }
 
   .input {
@@ -198,10 +198,10 @@
 }
 
 .showAllBrandsBtn {
+  margin-top: 16px;
   color: #5ad4a1;
   font-weight: 600;
   font-size: 14px;
-  margin-top: 16px;
 
   &:hover {
     color: #34c78a;

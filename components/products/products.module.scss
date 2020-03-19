@@ -1,8 +1,8 @@
 .products {
-  max-width: 1080px;
   position: relative;
   display: flex;
   flex-direction: column;
+  max-width: 1080px;
 }
 
 .list {
@@ -18,8 +18,8 @@
 
 .header {
   display: flex;
-  padding-right: 40px;
   margin-bottom: 24px;
+  padding-right: 40px;
 }
 
 .swither {

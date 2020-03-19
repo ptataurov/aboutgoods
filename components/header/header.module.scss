@@ -4,9 +4,9 @@
   background: #fff;
 
   .wrap {
-    border-bottom: 1px solid #eaeaea;
     padding-top: 24px;
     padding-bottom: 16px;
+    border-bottom: 1px solid #eaeaea;
   }
 }
 
@@ -68,8 +68,8 @@
   }
 
   a {
-    text-decoration: underline;
     color: #34c78a;
+    text-decoration: underline;
 
     &:hover {
       text-decoration: none;
@@ -84,6 +84,7 @@
 
 .toggleCategoryMenuBtn {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   padding: 16px 32px;
   color: #fff;
@@ -91,7 +92,6 @@
   font-size: 14px;
   background: #5ad4a1;
   border-radius: 2px;
-  flex-shrink: 0;
 
   &:global(.show) {
     .hamburger {

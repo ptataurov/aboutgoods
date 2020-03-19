@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "style": "stylelint --fix components/**/*.scss",
+    "dev": "yarn style && next",
     "build": "next build",
     "start": "next start"
   },
