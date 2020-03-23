@@ -51,9 +51,13 @@
   padding: 0 16px;
   color: #333;
   font-size: 16px;
-  background: #eaeaea;
+  background: #5ad4a1;
+  margin: 2px;
+  margin-left: 0;
+  width: 64px;
+  border-radius: 2px;
 
   &:hover {
-    background: #e2e2e2;
+    background: #34c78a;
   }
 }

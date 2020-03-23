@@ -3,7 +3,7 @@ import css from './products-table.module.scss'
 
 const product = {
   brandName: 'Sony',
-  brandLogo: '/img/logo-sony.png',
+  brandLogo: '/img/sony-logo.png',
   name: 'Телевизор KD-55XF9005 54.6" (2018)',
   price: '57 795 ₽',
   rating: '4.72',

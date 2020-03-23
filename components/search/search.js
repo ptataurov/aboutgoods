@@ -29,7 +29,9 @@ const Search = ({ mixin }) => {
         <span></span>
         <span></span>
       </span>
-      <button className={css.btn}>Найти</button>
+      <button className={css.btn}>
+        <img src='/img/search-icon.svg' alt='Иконка поиска' />
+      </button>
     </div>
   )
 }
