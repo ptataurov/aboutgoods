@@ -48,16 +48,13 @@
 }
 
 .btn {
+  margin-left: 0;
   padding: 0 16px;
   color: #333;
   font-size: 16px;
-  background: #5ad4a1;
-  margin: 2px;
-  margin-left: 0;
-  width: 64px;
-  border-radius: 2px;
+  background: #eaeaea;
 
   &:hover {
-    background: #34c78a;
+    background: #ccc;
   }
 }
