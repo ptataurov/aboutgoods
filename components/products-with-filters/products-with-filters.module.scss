@@ -4,12 +4,12 @@
 
 // mixins
 
+.products {
+  flex-grow: 1;
+  margin-right: 80px;
+}
+
 .filters {
   align-self: flex-start;
   margin-left: auto;
-}
-
-.products {
-  width: 100vw;
-  max-width: 1040px;
 }
