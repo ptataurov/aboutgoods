@@ -34,16 +34,16 @@ const CategoryMenu = ({ show, mixin }) => {
       `._category[data-name='${name}']`
     )
 
-    Array.prototype.filter
-      .call(links, el => el !== link)
+    Array.from(links)
+      .filter(el => el !== link)
       .forEach(el => {
         el.classList.remove('active')
       })
 
     link.classList.add('active')
 
-    Array.prototype.filter
-      .call(contents, el => el !== targetContent)
+    Array.from(contents)
+      .filter(el => el !== targetContent)
       .forEach(el => {
         el.classList.add('hidden')
       })

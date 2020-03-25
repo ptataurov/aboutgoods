@@ -37,6 +37,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "rxjs": "^6.5.4",
     "validator": "^12.2.0"
   },
   "devDependencies": {

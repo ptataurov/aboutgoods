@@ -3,11 +3,10 @@ import css from './products-table.module.scss'
 
 const product = {
   brandName: 'Sony',
-  brandLogo: '/img/sony-logo.png',
   name: 'Телевизор KD-55XF9005 54.6" (2018)',
   price: '57 795 ₽',
   rating: '4.72',
-  reviews: 20,
+  reviews: 1281,
   img:
     'https://avatars.mds.yandex.net/get-mpic/364668/img_id62240158504045648.jpeg/orig'
 }
@@ -23,6 +22,7 @@ const ProductsTable = ({ mixin }) => {
             <th className={css.productNameTh}>Название</th>
             <th>Бренд</th>
             <th>Средняя цена</th>
+            <th>Отзывов</th>
             <th>Рейтинг</th>
           </tr>
         </thead>
@@ -60,26 +60,16 @@ const ProductsTable = ({ mixin }) => {
                   </div>
                 </td>
                 <td>
-                  <div className={css.brandGroup}>
-                    <div className={css.brandLogoContainer}>
-                      <img
-                        src={product.brandLogo}
-                        alt={`Логотип ${product.brandName}`}
-                      />
-                    </div>
-                    <span className={css.brandName}>{product.brandName}</span>
-                  </div>
+                  <span className={css.brandName}>{product.brandName}</span>
                 </td>
                 <td className={css.priceTd}>
                   <span className={css.price}>{product.price}</span>
                 </td>
+                <td className={css.reviewsTd}>
+                  <span className={css.reviews}>{product.reviews}</span>
+                </td>
                 <td>
-                  <div className={css.ratingGroup}>
-                    <span className={css.rating}>{product.rating}</span>
-                    <span className={css.reviews}>
-                      {product.reviews} отзывов
-                    </span>
-                  </div>
+                  <span className={css.rating}>{product.rating}</span>
                 </td>
               </tr>
             )
