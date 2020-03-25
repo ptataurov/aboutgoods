@@ -2,6 +2,12 @@
   width: 100%;
   border-collapse: collapse;
 
+  a {
+    &:hover {
+      color: #34c78a;
+    }
+  }
+
   th {
     padding-bottom: 16px;
     color: #333;
@@ -23,13 +29,6 @@
 
     tr {
       height: 80px;
-      cursor: pointer;
-
-      &:hover {
-        .productName {
-          color: #34c78a;
-        }
-      }
     }
   }
 
@@ -73,7 +72,7 @@
 
 .position {
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .changePosition {
