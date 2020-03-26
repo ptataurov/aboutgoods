@@ -37,10 +37,8 @@ const CategoryMenu = ({ show, mixin }) => {
 
     const targetNodes = categoryMenu.querySelectorAll(`[data-name='${name}']`)
 
-    Array.prototype.forEach.call(activeNodes, el =>
-      el.classList.remove('active')
-    )
-    Array.prototype.forEach.call(targetNodes, el => el.classList.add('active'))
+    activeNodes.forEach(el => el.classList.remove('active'))
+    targetNodes.forEach(el => el.classList.add('active'))
   }
 
   const styles = {
