@@ -24,31 +24,23 @@ const CategoryMenu = ({ show, mixin }) => {
   const categoryMenuRef = useRef()
   const sideNavRef = useRef()
 
-  const sideNavLinkHandler = link => {
-    const { current: categoryMenu } = categoryMenuRef
+  const { current: categoryMenu } = categoryMenuRef
 
+  const mouseEnterHandler = link => {
     const name = link.dataset.name
-    const links = categoryMenu.querySelectorAll('._link')
-    const contents = categoryMenu.querySelectorAll('._category')
-    const targetContent = categoryMenu.querySelector(
-      `._category[data-name='${name}']`
+
+    const activeNodes = categoryMenu.querySelectorAll(
+      `.active:not([data-name='${name}'])`
     )
 
-    Array.from(links)
-      .filter(el => el !== link)
-      .forEach(el => {
-        el.classList.remove('active')
-      })
+    if (!activeNodes.length) return
 
-    link.classList.add('active')
+    const targetNodes = categoryMenu.querySelectorAll(`[data-name='${name}']`)
 
-    Array.from(contents)
-      .filter(el => el !== targetContent)
-      .forEach(el => {
-        el.classList.add('hidden')
-      })
-
-    targetContent.classList.remove('hidden')
+    Array.prototype.forEach.call(activeNodes, el =>
+      el.classList.remove('active')
+    )
+    Array.prototype.forEach.call(targetNodes, el => el.classList.add('active'))
   }
 
   const styles = {
@@ -63,13 +55,13 @@ const CategoryMenu = ({ show, mixin }) => {
         <nav className={css.sideNav} ref={sideNavRef}>
           <div className={css.scrollWrap}>
             {links.map((link, idx) => {
-              const styles = idx === 0 ? '_link active' : '_link'
+              const styles = idx === 0 ? ' _link active' : ' _link'
 
               return (
                 <Link href={`/category/${idx}`} key={idx}>
                   <a
-                    className={css.link + ' ' + styles}
-                    onMouseEnter={({ target }) => sideNavLinkHandler(target)}
+                    className={css.link + styles}
+                    onMouseEnter={({ target }) => mouseEnterHandler(target)}
                     data-name={link.label}>
                     {link.label}
                   </a>
@@ -81,11 +73,11 @@ const CategoryMenu = ({ show, mixin }) => {
 
         <div className={css.categoryContainer}>
           {links.map((link, idx) => {
-            const styles = idx === 0 ? '_category' : '_category hidden'
+            const styles = idx === 0 ? ' _category active' : ' _category'
 
             return (
               <div
-                className={css.category + ' ' + styles}
+                className={css.category + styles}
                 data-name={link.label}
                 key={idx}>
                 <header className={css.header}>

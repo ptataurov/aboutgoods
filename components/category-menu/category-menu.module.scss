@@ -48,8 +48,12 @@
 }
 
 .category {
-  display: flex;
+  display: none;
   flex-direction: column;
+
+  &:global(.active) {
+    display: flex;
+  }
 
   .scrollWrap {
     overflow: auto;
